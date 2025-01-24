@@ -13,6 +13,7 @@ const Card = () => {
         <div className='buttons'>
            <div className='button-Tag'>SHOP MEN</div>
            <div className='button-Tag'>SHOP WOMEN</div>
+           {/* <div>shsdovhdvuidhsdjijihihnhwdiljkjw</div> */}
         </div>
       </div>
       <div className='card2'>
