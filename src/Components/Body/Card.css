@@ -8,46 +8,133 @@
      justify-content: center;
  }
 
+ .head3{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+    font-size: 14px;
+
+
+    & p:hover{
+     text-decoration: underline;
+     cursor: pointer;
+     
+    }
+}
+
+ .icons{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+img{
+    height: 90%;
+    width: 100%;
+}
+
+
+ .zoom{
+    height: 100%;
+    width: 31%;
+    overflow: hidden;
+ }
+
 .card{
     height: 100%;
     display: flex;
-    width: 31%;
+    width: 100%;
     flex-direction: column;
     padding-top: 60px;
     color: white;
     text-align: center;
+    position: relative;
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url(../../../IMG/image11.jpeg);
     background-size: cover;
+    background-position: center;
+    transition: 250ms ease-in-out;
+    z-index: -1;
+}
+
+
+.card:hover::before{
+    transform: scale(1.05);
+}
+
+.card2::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../../../IMG/image10.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    transition: 250ms ease-in-out;
+    z-index: -1;
 }
 
 .card2{
     height: 100%;
     display: flex;
-    width: 31%;
+    width: 100%;
     flex-direction: column;
     padding-top: 60px;
     color: white;
     text-align: center;
-    background-image: url(../../../IMG/image10.jpeg);
-    background-size: cover;
+    position: relative;
+}
+
+.card2:hover::before{
+    transform: scale(1.05);
 }
 
 .card3{
     height: 100%;
     display: flex;
-    width: 31%;
+    width: 100%;
     flex-direction: column;
     padding-top: 60px;
     color: white;
     text-align: center;
-    background-image: url(../../../IMG/image12.jpeg);
-    background-size: cover;
+    position: relative;
 }
 
-/* h2{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 400;
-} */
+.card3::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../../../IMG/image12.jpeg);
+    background-size: cover;
+    background-position: center;
+    transition: 250ms ease-in-out;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.card3:hover::before{
+    transform: scale(1.05);
+}
+
 
 .buttons{
     width: 100%;
@@ -64,9 +151,10 @@
     opacity: 1;
 }
 
+
 .button-Tag{
     width: 37%;
-    height: 15%;
+    height: 13%;
     background: white;
     display: flex;
     justify-content: center;
@@ -88,6 +176,7 @@
     width: 100%;
     height: 300px;
     background-image:url(../../../IMG/image.jpg);
+    background-position: center;
     margin-top: 20px;
     background-size: cover;
     display: flex;
@@ -109,20 +198,43 @@
     display: flex;
     gap: 10px;
     background-size: cover;
+    position: inherit;
+}
+
+.Zoom{
+    width: 47%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .first{
-    width: 47%;
+    width: 100%;
     height: 100%;
-    background-image:url(../../../IMG/image3.jpg) ;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     color: white;
     padding-left: 40px;
     gap: 20px;
-    
+    position: relative;
+}
+
+.first::before{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    transition: 250ms ease-in-out;
+    background-image:url(../../../IMG/image3.jpg);
+    background-position: center;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-size: cover;
+}  
+
+.first:hover::before{
+    transform: scale(1.05);
 }
 
 .foot{
@@ -164,6 +276,12 @@ k{
     color:white;
 }
 
+.zuma{
+    width: 47%;
+    height: 49%;
+    overflow: hidden;
+}
+
 .second{
     width: 50%;
     height: 100%;
@@ -173,36 +291,106 @@ k{
 }
 
 .Box{
-    width: 47%;
-    height: 49%;
+    width: 100%;
+    height: 100%;
     background: rgb(245,245,245);
+    position: relative;
+}
+
+.Box::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
     background-image: url(../../../IMG/image23.png);
     background-size: cover;
+    background-position: center;
+    transition: 250ms ease-in-out;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+.Box2::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../../../IMG/image18.png);
+    background-size: cover;
+    background-position: center;
+    transition: 250ms ease-in-out;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+.Box3::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../../../IMG/image17.png);
+    background-size: cover;
+    background-position: center;
+    transition: 250ms ease-in-out;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+
+.Box4::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../../../IMG/image24.png);
+    background-size: cover;
+    background-position: center;
+    transition: 250ms ease-in-out;
+    z-index: 0;
+    top: 0;
+    left: 0;
 }
 
 .Box2{
-    width: 47%;
-    height: 49%;
+    width: 100%;
+    height: 100%;
     background: rgb(245,245,245);
-    background-image:url(../../../IMG/image18.png);
-    background-size: cover;
     position: relative;
 }
 
 .Box3{
-    width: 47%;
-    height: 49%;
+    width: 100%;
+    height: 100%;
     background: rgb(245,245,245);
-    background-image: url(../../../IMG/image17.png);
-    background-size: cover;
+    position: relative;
 }
 
 .Box4{
-    width: 47%;
-    height: 49%;
+    width: 100%;
+    height: 100%;
     background: rgb(245,245,245);
-    background-image: url(../../../IMG/image24.png);
     background-size: cover;
+    position: relative;
+    transition: all 250ms ease-in-out;
+}
+
+.Box:hover::before{
+    transform: scale(1.1);
+}
+
+.Box2:hover::before{
+    transform: scale(1.1);
+}
+
+.Box3:hover::before{
+    transform: scale(1.1);
+}
+
+.Box4:hover::before{
+    transform: scale(1.1);
 }
 
 .wrapper{
@@ -215,14 +403,13 @@ k{
     justify-content: center;
     gap: 10px;
     opacity: 0;
-    position: inherit;
-    bottom: 40px;
+    position: absolute;
+    top: 0px;
     transition: all 350ms ease-in-out;
 }
 
 .wrapper:hover{
     opacity: 1;
-    
 }
 
 .bugger{
@@ -259,19 +446,445 @@ k{
    background-image: url(../../../IMG/image30.svg);
    background-size: contain;
    background-repeat: no-repeat;
+   background-position: center;
 
 }
 
-.angle{
-    width:50%;
+.close{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.angle:hover::before{
+    transform: scale(1.05);
+}
+
+.angle2:hover::before{
+    transform: scale(1.05);
+}
+
+.angle::before{
+    content: "";
+    width: 100%;
     height: 100%;
     background-image: url(../../../IMG/image26.jpeg);
     background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 250ms ease-in-out;
+    
 }
 
-.angle2{
-    width:50%;
+.angle2::before{
+    content: "";
+    width: 100%;
     height: 100%;
     background-image: url(../../../IMG/image31.jpeg);
     background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 250ms ease-in-out;
+    
 }
+
+.angle{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-top: 50px;
+    gap: 10px;
+    position: relative;
+
+    & h3{
+        font-size: 20px;
+        font-weight: bold;
+        cursor: text;
+    }
+
+    & p{
+        font-size: 16px;
+        word-spacing: -2px;
+        text-decoration: none;
+        cursor: text;
+    }
+}
+
+.angle2{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-top: 50px;
+    gap: 10px;
+    position: relative;
+    
+
+    & h3{
+        font-size: 20px;
+        font-weight: bold;
+        cursor: text;
+    }
+
+    & p{
+        font-size: 16px;
+        word-spacing: -2px;
+        text-decoration: none;
+        cursor: text;
+    }
+}
+
+.detail{
+    width: 100%;
+    height: 10%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    padding-top: 73%;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    & p{
+        font-size: 12px;
+        color: rgb(77, 73, 73);
+        padding-top: 5px;
+    }
+}
+
+.button-tag{
+    width: 23%;
+    height: 10%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 350ms ease-in-out;
+    cursor: pointer;
+}
+
+.button-tag:hover{
+    background:black;
+    color:white;
+}
+
+.fifth-section{
+    width: 98%;
+    height: 400px;
+    /* background-color: gray; */
+    margin-top: 5%;
+    margin-left: 4%;
+    display: flex;
+    flex-direction: column;
+
+    & .details{
+        width: 98%;
+        height: 25%;
+        background-color: tan;
+        display: flex;
+        /* padding-left: 10px; */
+    }
+}
+
+.wrap{
+    height: 100%;
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    gap: 10px;
+}
+
+.return{
+    width: 70%;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+
+.box:hover{
+    transform: scale(1.1);
+}
+
+/* .box2:hover{
+    transform: scale(1.1);
+}
+
+.box3:hover{
+    transform: scale(1.1);
+}
+
+.box4:hover{
+    transform: scale(1.1);
+} */
+
+
+.box{
+    width: 100%;
+    height: 100%;
+    background: rgb(245,245,245);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 250ms ease-in-out;
+    background-position: center;
+    position: relative;
+
+    & .button-Tag{
+        width: 40%;
+        height: 15%;
+        background-color: white;
+    }
+
+    & .button-Tag:hover{
+        background: black;
+    }
+}
+
+img{
+    width: 100%;
+    height: 100%;
+
+}
+
+/* .box2{
+    width: 100%;
+    height: 100%;
+    background: rgb(245,245,245);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 250ms ease-in-out;
+    background-position: center;
+}
+
+.box3{
+    width: 100%;
+    height: 100%;
+    background: rgb(245,245,245);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 250ms ease-in-out;
+    background-position: center;
+}
+
+.box4{
+    width: 100%;
+    height: 100%;
+    background: rgb(245,245,245);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 250ms ease-in-out;
+    background-position: center;
+} */
+
+.text{
+    width: 26%;
+    height: 100%;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 14px;
+
+    & p{
+        font-size: 14px;
+        color: black;
+        padding-top: 5px;
+        text-decoration: none;
+    }
+}
+
+.sign-up{
+    width: 100%;
+    height: 300px;
+    background: rgb(245,245,245);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: 30px;
+    gap: 20px;
+
+    & h1{
+        width: 100%;
+        height: 20%;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    & p{
+        text-decoration: none;
+        text-align: center;
+    }
+
+    & span{
+        color: black;
+        text-align: center;
+        font-size: 14px;
+
+        & j{
+            color: black;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+}
+
+.email{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    & input{
+        width: 35%;
+        height: 82%;
+        border: none;
+        border-bottom: 2px solid black;
+        padding: 20px;
+        font-size: 18px;
+        outline: none;
+    }
+
+    & .button-tag{
+        width: 8%;
+        height: 85%;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 12px;
+        font-weight: 500;
+        transition: all 350ms ease-in-out;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    
+    & .button-tag:hover{
+        background:white;
+        color:black;
+    }
+}
+
+.approach{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+
+    & .comfort{
+        width: 33%;
+        height: 100%;
+        /* background-color: greenyellow; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 25px;
+        cursor: text;
+
+
+        & h1{
+            width: 100%;
+            height: 10%;
+            font-weight: bold;
+            padding-right: 19%;
+        }
+
+        & h3{
+            margin-top: 30px;
+            font-size: 22px;
+        }
+
+        & p{
+            margin-top: 20px;
+            text-align: left;
+            font-size: 14px;
+            text-decoration: none;
+            cursor: text;
+            line-height: 150%;
+        }
+
+        & l{
+            text-decoration: underline;
+            font-size: 15px;
+            cursor: pointer;
+        }
+    }
+
+    & .sustain{
+        width: 33%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        /* padding: 25px; */
+        cursor: text;
+
+
+        & h3{
+            margin-top: 30px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        & p{
+            margin-top: 10px;
+            text-align: left;
+            font-size: 14px;
+            text-decoration: none;
+            cursor: text;
+            line-height: 150%;
+        }
+
+        & l{
+            text-decoration: underline;
+            font-size: 15px;
+            cursor: pointer;
+        }
+    }
+
+    & .materials{
+        width: 33%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        cursor: text;
+
+        & h3{
+            margin-top: 30px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        & p{
+            margin-top: 10px;
+            text-align: left;
+            font-size: 14px;
+            text-decoration: none;
+            cursor: text;
+            line-height: 150%;
+        }
+
+        & l{
+            text-decoration: underline;
+            font-size: 15px;
+            cursor: pointer;
+        }
+    }
+}
+

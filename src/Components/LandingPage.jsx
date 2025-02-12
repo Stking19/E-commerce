@@ -1,13 +1,17 @@
 import React from 'react'
 import Header from './Header/Header'
-import Card from './Body/Card'
+import Loadscreen from './Loadscreen'
+import Footer from './footer/Footer'
+import { Outlet } from 'react-router-dom'
 
 
 const LandingPage = () => {
   return (
     <>  
+    <Loadscreen />
     <Header/>
-    <Card/>
+    <Outlet />
+    <Footer />
     </>
 
 
